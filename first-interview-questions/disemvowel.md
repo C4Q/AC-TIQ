@@ -45,7 +45,7 @@ General steps:
 ## Solution Code
 
 ```javascript
-
+// Javascript
 function disemvowel(str) {
   if (str == null || str === "") {
     return str;
