@@ -47,14 +47,19 @@ General steps:
 ```javascript
 
 function disemvowel(str) {
+  if (str == null || str === "") {
+    return str;
+  }
+
   var output = "";
+
   for (var i = 0; i < str.length; i++) {
     if (!isVowel(str[i])) {
       output += str[i];
     }
   }
-  return output;
 
+  return output;
 }
 
 // Helper method is optional! Can include this logic in disemvowel method.
