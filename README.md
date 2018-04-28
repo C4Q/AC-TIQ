@@ -1,6 +1,7 @@
 # AC-TIQ
 Question bank for C4Q's Technical Interview Qualifier (TIQ) event
 
+
 ## First Mock Interview
 Please select one of these relatively easier problems for the fellow's
 first mock interview:
@@ -12,9 +13,8 @@ first mock interview:
 ## Second Mock Interview
 Please select one of these relatively more challenging problems for the 
 fellow's second mock interview:
-* []()
-* []()
-* []()
+* [Validate parentheses](second-interview-questions/validate-parentheses.md)
+* [Recursively check if a String contains an "a"](second-interview-questions/recursive-check-for-a.md)
 
 
 In either interview, if the fellow quickly completes the chosen problem,
