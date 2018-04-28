@@ -58,6 +58,7 @@ modify their solution to account for it.
 ## Solution Code
 
 ```javascript
+// Javascript
 function getSecondLargest(arr) {
     var largest = arr[1] > arr[0] ? arr[1] : arr[0];
     var secondLargest = arr[1] > arr[0] ? arr[0] : arr[1];
@@ -70,6 +71,7 @@ function getSecondLargest(arr) {
             secondLargest = arr[i];
         }
     }
+    
     return secondLargest;
 }
 ```
