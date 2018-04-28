@@ -13,6 +13,7 @@ Answers to questions the fellows may ask:
 * Should the return type be a boolean? _Yes_
 * Could the input String ever be null or empty? _Yes; in that case return false_
 * Does case matter? _No, treat 'a' and 'A' as equivalent_
+* Do I really have to use recursion? _Yep!_
 
 
 ## Sample Inputs & Outputs
