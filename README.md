@@ -19,3 +19,7 @@ fellow's second mock interview:
 
 In either interview, if the fellow quickly completes the chosen problem,
 feel free to give them additional problems from this bank of questions.
+
+## Important Links
+* [Schedule workbook](https://drive.google.com/open?id=1JAcyqMqrJS7yKYA3Jkpzc6Ydx79I517C3uN7g9LsGNo) - This also contains rubric links that will pre-fill your name and the fellow's name
+* [Blank rubric](https://goo.gl/forms/jtdEv9joXbjP8IcC2)
