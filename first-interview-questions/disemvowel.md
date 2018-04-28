@@ -71,6 +71,5 @@ function isVowel(char) {
     char === 'o' ||
     char === 'u' ||
     char === 'y';
-
 }
 ```
