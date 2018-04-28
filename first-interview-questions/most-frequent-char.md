@@ -58,6 +58,7 @@ the fellow being marked as less than proficient.
 ## Solution Code
 
 ```javascript
+// Javascript
 function getMostFrequentChar(str) {
     var counts = {};
     
@@ -82,6 +83,5 @@ function getMostFrequentChar(str) {
     }
 
     return mostFreqChar;
-
 }
 ```
