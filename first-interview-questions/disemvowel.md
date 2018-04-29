@@ -44,6 +44,35 @@ General steps:
 
 ## Solution Code
 
+```java
+// Java
+public static String disemvowel(String str) {
+  if (str == null || str.isEmpty()) {
+    return str;
+  }
+
+  StringBuilder sb = new StringBuilder();
+
+  for (int i = 0; i < str.length()) {
+    if (!isVowel(str.charAt(i))) {
+      sb.append(str.charAt(i));
+    }
+  }
+  return sb.toString();
+}
+
+public static boolean isVowel(char c) {
+  c = Character.toLowerCase(c);
+  return c == 'a' ||
+    c == 'e' ||
+    c == 'i' ||
+    c == 'o' ||
+    c == 'u' ||
+    c == 'y';
+}
+```
+
+
 ```javascript
 // Javascript
 function disemvowel(str) {

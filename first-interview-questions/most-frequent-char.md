@@ -57,6 +57,34 @@ the fellow being marked as less than proficient.
 
 ## Solution Code
 
+```java
+// Java
+public static char getMostFrequentChar(String str) {
+    Map<Character, Integer> counts = new HashMap<>();
+
+    for (int i = 0; i < str.length(); i++) {
+        char c = Character.toLowerCase(str.charAt(i));
+        if (counts.containsKey(c)) {
+            counts.put(c, count.get(c) + 1);
+        } else {
+            counts.put(c, 1);
+        }
+    }
+
+    char mostFreqChar = str.charAt(0);
+
+    for (int i = 0; i < str.length(); i++) {
+        if (counts.get(Character.toLowerCase(str.charAt(i))) >
+            counts.get(Character.toLowerCase(mostFreqChar))) {
+            mostFreqChar = str.charAt(i);
+        }   
+    }
+
+    return mostFreqChar;
+}
+```
+
+
 ```javascript
 // Javascript
 function getMostFrequentChar(str) {
@@ -78,7 +106,7 @@ function getMostFrequentChar(str) {
     for (i = 0; i < str.length; i++) {
         if (counts[str[i].toLowerCase()] >
               counts[mostFreqChar.toLowerCase()]) {
-            mostFreqChar = char;
+            mostFreqChar = str[i];
         }
     }
 

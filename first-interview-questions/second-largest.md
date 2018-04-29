@@ -57,6 +57,26 @@ modify their solution to account for it.
 
 ## Solution Code
 
+```java
+// Java
+public static int getSecondLargest(int[] arr) {
+    int largest = arr[1] > arr[0] ? arr[1] : arr[0];
+    int secondLargest = arr[1] > arr[0] ? arr[0] : arr[1];
+
+    for (int i = 2; i < arr.length; i++) {
+      if (arr[i] > largest) {
+          secondLargest = largest;
+          largest = arr[i];
+      } else if (arr[i] > secodLargest) {
+          secodLargest = arr[i];
+      }
+    }
+    
+    return secodLargest;
+}
+```
+
+
 ```javascript
 // Javascript
 function getSecondLargest(arr) {

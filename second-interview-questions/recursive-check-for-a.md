@@ -43,6 +43,19 @@ General steps:
 
 ## Solution Code
 
+```java
+// Java
+public static boolean checkForA(String str) {
+  if (str == null || str.length() == 0) {
+      return false;
+  }
+
+  return (Character.toLowerCase(str.charAt(0)) == 'a') ||
+          checkForA(str.substring(1));
+}
+```
+
+
 ```javascript
 // Javascript
 function checkForA(str) {

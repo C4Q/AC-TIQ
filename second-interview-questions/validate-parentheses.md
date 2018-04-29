@@ -56,6 +56,46 @@ General steps:
 
 ## Solution Code
 
+```java
+// Java
+public static boolean validParentheses(String str) {
+    if (str == null || str.length() == 0) {
+        return true;
+    }
+
+    Stack<Character> stack = new Stack<>();
+
+    for (int i = 0; i < str.length(); i++) {
+        if (isOpener(str.charAt(i))) {
+            stack.push(str.charAt(i));
+        } else if (isCloser(str.charAt(i))) {
+            if (getMatchingOpener(str.charAt(i)) != stack.pop()) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+public static boolean isOpener(char c) {
+    return c == '(' || c == '[' || c == '{';
+}
+
+public static boolean isCloser(char c) {
+    return c == ')' || c == ']' || c == '}';
+}
+
+public static char getMatchngOpener(char c) {
+    switch(c) {
+        case ')': return '(';
+        case ']': return ']';
+        case '}': return '}';
+        default: return c;
+    }
+}
+```
+
+
 ```javascript
 // Javascript
 function validParentheses(str) {
