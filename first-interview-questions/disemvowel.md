@@ -102,3 +102,11 @@ function isVowel(char) {
     char === 'y';
 }
 ```
+
+```swift
+//Swift
+func disemvowel(_ str: String) -> String {
+    let vowels = "aeiouy"
+    return str.filter{!vowels.contains(Character(String($0).lowercased()))}
+}
+```
