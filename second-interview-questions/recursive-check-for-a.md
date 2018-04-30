@@ -66,3 +66,11 @@ function checkForA(str) {
     return (str[0].toLowerCase() === 'a') || checkForA(str.substr(1));
 }
 ```
+
+```swift
+//Swift
+func containsA(str: String) -> Bool {
+    guard !str.isEmpty else { return false }
+    return String(str.last!).lowercased() == "a" || containsA(str: String(str.prefix(str.count - 1)))
+}
+```
