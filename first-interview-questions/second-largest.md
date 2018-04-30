@@ -95,3 +95,19 @@ function getSecondLargest(arr) {
     return secondLargest;
 }
 ```
+```swift
+//Swift
+func secondLargestLinear(in arr: [Int]) -> Int {
+    var largest = Int.min
+    var secondLargest = Int.min
+    for num in arr {
+        if num > largest {
+            secondLargest = largest
+            largest = num
+        } else if num > secondLargest {
+            secondLargest = num
+        }
+    }
+    return secondLargest
+}
+```
