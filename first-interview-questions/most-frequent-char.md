@@ -113,3 +113,27 @@ function getMostFrequentChar(str) {
     return mostFreqChar;
 }
 ```
+
+```swift
+//Swift
+func mostFrequentlyOccurringChar(in str: String) -> Character? {
+    guard str.count > 0 else { return nil }
+    let str = str.lowercased().filter{$0 != " "}
+    var frequencyDict = [Character: Int]()
+    var firstAppearanceDict = [Character: Int]()
+    for (i,c) in str.enumerated() {
+        frequencyDict[c] = frequencyDict[c, default: 0] + 1
+        if firstAppearanceDict[c] == nil {
+            firstAppearanceDict[c] = i
+        }
+    }
+    var max = (char: "", occurrences: 0)
+    for (char, count) in frequencyDict {
+        if count > max.occurrences || (count == max.occurrences &&
+                                       firstAppearanceDict[char]! < firstAppearanceDict[Character(max.char)]!) {
+            max = (String(char), count)
+        }
+    }
+    return Character(max.char)
+}
+```
