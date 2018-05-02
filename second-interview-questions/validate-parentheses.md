@@ -29,6 +29,7 @@ Answers to questions the fellows may ask:
 | "{ [  ] (  )  }" | true |
 | "{ [ }" | false |
 | "{ [ ( ] ) }" |  false |
+| "{{{{{ [ ( ] ) }" |  false |
 | "" | true |
 
 
@@ -51,7 +52,7 @@ General steps:
   * If it's an opener, push it onto the stack
   * If it's a closer, pop the most recent opener from the stack and check if it matches this closer
     * If it doesn't match, return false
-* If you get thru the whole loop without returning false, then return true
+* If you get through the whole loop without returning false, then make sure the stack is empty to validate there are no openers at the start or end of the string.
 
 
 ## Solution Code
@@ -74,7 +75,7 @@ public static boolean validParentheses(String str) {
             }
         }
     }
-    return true;
+    return stack.size() == 0;
 }
 
 public static boolean isOpener(char c) {
@@ -114,7 +115,7 @@ function validParentheses(str) {
             }
         }
     }
-    return true;
+    return stack.length === 0;
 }
 
 function isOpener(char) {
